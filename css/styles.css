@@ -24,7 +24,7 @@ body {
 }
 
 .celebration-image {
-    width: 40%; /* Set the width of the image to take 40% of the container */
+    width: 40%; /* Default width of the image for larger screens */
     height: auto; /* Maintain aspect ratio */
     object-fit: cover; /* Cover the area without distortion */
 }
@@ -58,11 +58,11 @@ body {
 /* Media Queries for additional responsiveness */
 @media (max-width: 768px) {
     .celebration-image {
-        width: 50%; /* Adjust image width for smaller screens */
+        width: 30%; /* Adjust image width for smaller screens */
     }
 
     .countdown {
-        width: 50%; /* Adjust countdown width for smaller screens */
+        width: 70%; /* Adjust countdown width for smaller screens */
     }
 
     .celebration-title {
@@ -77,20 +77,21 @@ body {
     }
 
     .celebration-image {
-        width: 100%; /* Full width for very small screens */
+        width: 15%; /* Make the image much smaller for very small screens */
     }
 
     .countdown {
         width: 100%; /* Full width for very small screens */
         grid-template-columns: repeat(3, 1fr); /* Maintain 3 columns */
+        gap: 20px; /* Increase gap for better spacing */
+    }
+
+    .time {
+        padding: 30px; /* Increase padding for larger countdown boxes */
+        font-size: 4vw; /* Increase font size for countdown boxes */
     }
 
     .celebration-title {
         font-size: 8vw; /* Further increase title font size for very small screens */
-    }
-}
-@media (max-width: 480px) {
-    .countdown {
-        grid-template-rows: repeat(2, 1fr); /* Two rows for countdown boxes */
     }
 }
