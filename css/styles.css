@@ -24,7 +24,7 @@ body {
 }
 
 .celebration-image {
-    width: 40%; /* Default width of the image for larger screens */
+    width: 20%; /* Set the width of the image to take 20% of the container */
     height: auto; /* Maintain aspect ratio */
     object-fit: cover; /* Cover the area without distortion */
 }
@@ -33,7 +33,7 @@ body {
     display: grid; /* Use grid for countdown boxes */
     grid-template-columns: repeat(3, 1fr); /* 3 columns */
     gap: 10px; /* Space between boxes */
-    width: 60%; /* Set the width of the countdown to take 60% of the container */
+    width: 80%; /* Set the width of the countdown to take 80% of the container */
     padding: 20px; /* Add some padding */
 }
 
@@ -72,16 +72,16 @@ body {
 
 @media (max-width: 480px) {
     .countdown-container {
-        flex-direction: column; /* Stack image and countdown vertically */
-        align-items: center; /* Center items */
+        flex-direction: row; /* Keep image and countdown side by side */
+        align-items: flex-start; /* Align items to the top */
     }
 
     .celebration-image {
-        width: 15%; /* Make the image much smaller for very small screens */
+        width: 25%; /* Make the image smaller for very small screens */
     }
 
     .countdown {
-        width: 100%; /* Full width for very small screens */
+        width: 75%; /* Adjust countdown width for very small screens */
         grid-template-columns: repeat(3, 1fr); /* Maintain 3 columns */
         gap: 20px; /* Increase gap for better spacing */
     }
