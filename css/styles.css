@@ -30,15 +30,14 @@ body {
 }
 
 .countdown {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    display: grid; /* Use grid for countdown boxes */
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 10px; /* Space between boxes */
     width: 60%; /* Set the width of the countdown to take 60% of the container */
     padding: 20px; /* Add some padding */
 }
 
 .time {
-    margin: 10px;
     padding: 20px;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
@@ -72,15 +71,26 @@ body {
 }
 
 @media (max-width: 480px) {
+    .countdown-container {
+        flex-direction: column; /* Stack image and countdown vertically */
+        align-items: center; /* Center items */
+    }
+
     .celebration-image {
         width: 100%; /* Full width for very small screens */
     }
 
     .countdown {
         width: 100%; /* Full width for very small screens */
+        grid-template-columns: repeat(3, 1fr); /* Maintain 3 columns */
     }
 
     .celebration-title {
         font-size: 8vw; /* Further increase title font size for very small screens */
+    }
+}
+@media (max-width: 480px) {
+    .countdown {
+        grid-template-rows: repeat(2, 1fr); /* Two rows for countdown boxes */
     }
 }
