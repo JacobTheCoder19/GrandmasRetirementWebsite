@@ -1,4 +1,5 @@
-const countdownDate = new Date("May 1, 2025 00:00:00").getTime();
+// Set to 3pm as that is when the final shift is over
+const countdownDate = new Date("May 1, 2025 15:00:00").getTime();
 
 const updateCountdown = () => {
     const now = new Date().getTime();
